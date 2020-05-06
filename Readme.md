@@ -10,7 +10,7 @@ Last Updated By : Aditya
 
 `Main Application Page:` https://forexmoneyexperience.herokuapp.com/
 
-`Administrator Page:` https://forexmoneyexperience.herokuapp.com/login
+`Administrator Page:` https://forexmoneyexperience.herokuapp.com/admin
 
 `Username: admin1`
 
