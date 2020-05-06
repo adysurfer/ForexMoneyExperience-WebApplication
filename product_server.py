@@ -337,6 +337,6 @@ def logout():
 # __main__ file is the first point of execution
 if __name__ == '__main__':
     # to keep the server running continuous
-    #app.debug = True
+    # app.debug = True
     # Run Server and Execute the code on server
     app.run()
