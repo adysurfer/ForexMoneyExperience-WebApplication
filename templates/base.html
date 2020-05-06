@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<!-- Using Bulma for Design-->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>404 Not Found</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+
+</head>
+
+<!-- call redirect() on load to return to the main page-->
+<body onload="redirect()">
+<section class="hero is-dark is-bold">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title">
+                FrxMonExp
+            </h1>
+            <h2 class="subtitle">
+                Forex Money Experience
+            </h2>
+        </div>
+    </div>
+</section>
+
+<!-- code for extend, take this and place wherever to extend file-->
+{% block content %}
+{% endblock %}
+
+<script>
+    function redirect() {
+        setTimeout(function () {
+                window.location.href= "compare"
+            }
+            , 5000);
+    }
+</script>
+
+
+
+
+
+
+<footer class="footer">
+    <div class="content has-text-centered">
+        <p>
+            <strong>FrxMonExp - Forex Money Experience</strong> source code is licensed
+            <a href="#">MIT Licence</a>. <a href="about"><br> About Us</a>.
+        </p>
+    </div>
+</footer>
+</body>
+
+
+</html>

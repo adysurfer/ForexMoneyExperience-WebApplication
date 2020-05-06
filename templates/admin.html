@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+
+    <meta charset="UTF-8"/>
+    <title>admin</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+<body>
+
+<section class="hero is-dark is-bold">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title">
+                FrxMonExp
+            </h1>
+            <h2 class="subtitle">
+                Forex Money Experience
+            </h2>
+        </div>
+    </div>
+</section>
+<header><p style="margin-top: 10px;margin-left: 10px" class="column has-background-warning is-one-quarter has-text-centered"><strong> Logged In Username : {{a_s}}</strong>
+<button style="margin-left: 25px" class="button  is-black"><a href = "/logout">Logout</a></button></p>
+
+</header><br>
+
+<div class="container">
+    <div class="notification" style="border: 2px solid orange"><strong>&nbsp;ATTENTION</strong> : MAKE SURE TO FIRST DELETE THE NOT SUPPORTED
+    'SERVICE PROVIDERS NAMES' MANUALLY FROM THE 'DATA SCRAPING AREA' AND THEN PROCEED WITH DELETION HERE IN ORDER
+    &nbsp;TO PERMANENTLY REMOVE THE NON - SUPPORTED 'SERVICE PROVIDERS' FROM THE DATABASE
+</div>
+  </div>
+<br>
+
+<div style="margin-left: 10px" class="field">
+
+  <div class="control">
+      <label class="label" for="sp"><strong>Supported Service providers:</strong></label>
+    <div class="select is-warning">
+
+        <select id="sp" name="slist" form="spform">
+    <option value= "1"  selected>Select Service Providers</option>
+    {% for sp in s_list %}
+    <option value="{{sp}}">{{sp}}</option>
+    {% endfor %}
+    </select>
+
+    </div>
+  </div>
+</div>
+
+<form target="_self" action="" name="slistform" id="spform" method="post"></form>
+<button style="margin-left: 10px" class="button is-black" form="spform" type="submit"  name="del" id="del_id" value="Delete Service Provider" onclick="by_id()">
+    Delete Service Provider
+</button>
+
+
+<div class="container  has-text-centered">
+    <strong style="color: red">{{s_p}}</strong><br>
+    <strong style="color: red">{{error}}</strong><br>
+    <strong style="color: red">{{s_n}}</strong>
+    <strong style="color: red">{{err}}</strong>
+</div>
+
+
+<!-- Refresh window on click-->
+<button style="margin-left: 10px;margin-bottom: 20px" class="button is-success" type="button" name="btn" id="refresh" value="Refresh List Here" onclick="window.location.href=location.href">
+    Refresh List here </button>
+
+<script type="text/javascript">
+    //  submitted service provider value to delete
+    function by_id() {
+        document.getElementById('spform').submit()
+
+
+
+    }
+
+</script>
+
+<footer class="footer">
+    <div class="content has-text-centered">
+        <p>
+            <strong>FrxMonExp - Forex Money Experience</strong> source code is licensed
+            <a href="#">MIT Licence</a>. <a href="about"><br> About Us</a>.
+        </p>
+    </div>
+</footer>
+
+</body>
+</html>
