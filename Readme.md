@@ -8,6 +8,12 @@ Last Updated on Python 3.x.x: 10 May 2020
 
 Last Updated By : Aditya
 
+MainApplicationPage: https://forexmoneyexperience.herokuapp.com/
+
+Administrator Page: https://forexmoneyexperience.herokuapp.com/admin
+
+`username: admin1, Password:password`
+
 =========================================
 
 A simple <strong> Web application</strong> which picks currency rates in real time from different websites
