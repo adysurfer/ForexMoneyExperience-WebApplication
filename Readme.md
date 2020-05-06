@@ -58,4 +58,4 @@ Steps:
 - Now, for creating the tables in DATABASE go to CLI and type `cmd: heroku run python`
 - Create table using `cmd: from product_server import db` then `cmd: db.create_all()` and exit the console
 - To see the DATABASE use `cmd: heroku pg:psql --app forexmoneyexperience`
-- To see all columns from the table use `cmd: select * from table_name`
+- To see all columns from the table use `cmd: select * from table_name;`
