@@ -14,7 +14,7 @@ Last Updated By : Aditya
 
 `Username: admin1`
 
-`Password: password`
+`Password: admin1`
 
 =========================================
 
