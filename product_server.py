@@ -21,9 +21,7 @@ if ENV == "development":
 
 else:
     app.debug = False
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://yrcmhvklpgthlx' \
-                                            ':1465aadda34b7d40ac8fdd5fbadda76ba347d081f79dba5584562a34d5ba30d1@ec2-52' \
-                                            '-71-55-81.compute-1.amazonaws.com:5432/d6i15548f8828s'
+    app.config['SQLALCHEMY_DATABASE_URI'] = "postgres://ctaicvtbvlqgsc:d919863c85bb9a31ec5049fe75bcb04615df0a09bab1fd272c1951d2adf6e629@ec2-18-214-211-47.compute-1.amazonaws.com:5432/dev9fiv0us5ad5"
 
 # Hide Warnings: we dont need to track modifications of the objects
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
