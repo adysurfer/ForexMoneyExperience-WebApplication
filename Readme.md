@@ -12,7 +12,8 @@ MainApplicationPage: https://forexmoneyexperience.herokuapp.com/
 
 Administrator Page: https://forexmoneyexperience.herokuapp.com/admin
 
-`username: admin1, Password:password`
+`username: admin1
+ Password:password`
 
 =========================================
 
