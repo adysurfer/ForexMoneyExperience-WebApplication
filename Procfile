@@ -1,1 +1,1 @@
-web: gunicorn app:product_server
+web: gunicorn -b :$PORT app:product_server
