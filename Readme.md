@@ -1,4 +1,5 @@
 =========================================
+
 FrxMonExp - Forex Money Experience
 
 Created on, 10 April 2020
@@ -11,24 +12,24 @@ Last Updated By : Aditya
 A simple <strong> Web application</strong> which picks currency rates in real time from different websites
 and enable users to see all of the currency rates on one single platform.
 
-Steps to Run on 'localhost' Windows platform are given below, However for other platforms check: https://flask.palletsprojects.com
-/en/1.1.x/installation/.
+Steps to Run on 'localhost' Windows platform are given below, However for other platforms check: `https://flask.palletsprojects.com
+/en/1.1.x/installation/`
 
 Steps to follow :
 - Import project FrxMonExp and create a virtual environment using terminal: python3 -m venv venv for windows
 - Activate virtual environment using terminal: venv\Scripts\activate
 - Install all packages in requirements.txt file
 - Setup PostgreSQL Database:
-1.) Download PostgreSQL database here : https://www.enterprisedb.com/downloads/postgres-postgresql-downloads
+1.) Download PostgreSQL database here: `https://www.enterprisedb.com/downloads/postgres-postgresql-downloads`
     if you use GUI interface for PostgreSQL then while installing skip pgadmin setup
-2.) Download, Run and install pgadmin here: https://www.pgadmin.org/download/pgadmin-4-windows/
-3.) Setup database and create as new database, Name it to 'productcomparision'
+2.) Download, Run and install pgadmin here: `https://www.pgadmin.org/download/pgadmin-4-windows/`
+3.) Setup database and create as new database, Name it to '`productcomparision`'
 4.) Use Console and type following commands to create the table and columns:
     NOTE: Make sure your server is turned off at the time you run these commands
-    i.) from product_server import db, Press enter
-    ii.) db.createall(), Press enter
-- Run cmd: set FLASK_APP = product_server.py press enter then run, cmd: flask run
-- Visit localhost -> http://localhost:5000 to see the web application interface
+    i.) `from product_server import db`, Press `enter`
+    ii.) `db.createall()`, Press `enter`
+- Run cmd: `set FLASK_APP = product_server.py` press `enter` then run, cmd: `flask run`
+- Visit localhost -> `http://localhost:5000` to see the web application interface
 
 **Deployment to Heroku Cloud Server**
 
