@@ -51,7 +51,7 @@ Steps:
 - Create DATABASE using `cmd: heroku addons:create heroku-postgresql:hobby-dev --app forexmoneyexperience`
 - Get DATABASE_URL using `cmd: heroku config --app forexmoneyexperience`
 - Install package `gunicorn` and create a `Procfile` and mention `web: gunicorn app: product_server`
-- Create `runtime.txt` file and mention runtime python version `python-3.7.2` in it
+- Create `runtime.txt` file and mention runtime python version `python-3.7.6` in it
 - Add files to git using `cmd: git add. && commit -m "Initial deployment"`
 - Create a Heroku git repository `cmd: heroku git:remote -a forexmoneyexperience`
 - Push files to Heroku git using `cmd: git push heroku master` which will deploy the application to heroku server
