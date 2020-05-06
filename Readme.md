@@ -14,7 +14,7 @@ Administrator Page: https://forexmoneyexperience.herokuapp.com/admin
 
 `Username: admin1`
 
-`Password:password`
+`Password: password`
 
 =========================================
 
