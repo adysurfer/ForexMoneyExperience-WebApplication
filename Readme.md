@@ -8,9 +8,9 @@ Last Updated on Python 3.x.x: 10 May 2020
 
 Last Updated By : Aditya
 
-MainApplicationPage: https://forexmoneyexperience.herokuapp.com/
+`MainApplicationPage:` https://forexmoneyexperience.herokuapp.com/
 
-Administrator Page: https://forexmoneyexperience.herokuapp.com/login
+`Administrator Page:` https://forexmoneyexperience.herokuapp.com/login
 
 `Username: admin1`
 
