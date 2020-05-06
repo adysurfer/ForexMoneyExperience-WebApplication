@@ -163,8 +163,8 @@ scheduler = BackgroundScheduler(daemonic=True)
 
 
 # continuous updating the database with job scheduler
-# scheduler.add_job(get_prices, trigger='interval', seconds=60)
-# scheduler.start()
+scheduler.add_job(get_prices, trigger='interval', seconds=60)
+scheduler.start()
 
 # If page not found
 @app.errorhandler(404)
