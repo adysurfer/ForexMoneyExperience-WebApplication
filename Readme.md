@@ -19,7 +19,7 @@ Steps to Run on 'localhost' Windows platform are given below, However for other 
 Steps to follow :
 - Import project FrxMonExp and create a virtual environment using terminal: `python3 -m venv venv` for windows
 - Activate virtual environment using terminal: `venv\Scripts\activate`
-- Install all packages in `requirements.txt` file
+- Use `pip freeze > requirements.txt` to create & see packages used in `requirements.txt` file
 
 **Setup PostgreSQL Database:**
 
@@ -50,7 +50,7 @@ Steps:
 - In CLI type `cmd: heroku login` then create project using `cmd: heroku create forexmoneyexperience`
 - Create DATABASE using `cmd: heroku addons:create heroku-postgresql:hobby-dev --app forexmoneyexperience`
 - Get DATABASE_URL using `cmd: heroku config --app forexmoneyexperience`
-- Install package `gunicorn` and create a `Procfile` and mention `web: gunicorn app: product_server`
+- Install package `gunicorn` and create a `Procfile` and mention `web: gunicorn --bind 0.0.0.0:$PORT product_server:app`
 - Create `runtime.txt` file and mention runtime python version `python-3.7.6` in it
 - Add files to git using `cmd: git add. && commit -m "Initial deployment"`
 - Create a Heroku git repository `cmd: heroku git:remote -a forexmoneyexperience`
