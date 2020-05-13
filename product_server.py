@@ -206,7 +206,7 @@ def compare():
         row1 = "<th> Service Providers </th>"
         row2 = "<th> Exchange Rate </th>"
         row3 = "<th> Transfer Duration </th>"
-        row4 = "<th> Recipient Gets(excluding transfer fees)</th>"
+        row4 = "<th> Recipient Gets (excluding transfer fees)</th>"
 
         # Querying the database to fetch all rows where column matches the given condition
 
