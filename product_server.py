@@ -55,10 +55,14 @@ class PriceData(db.Model):
 # Data Scrape Code to fetch prices
 # DATA SCRAPING AREA
 def get_prices():
-    url_ext = ["germany/india/eur/inr/", "united-states/india/usd/inr/", "india/united-states/inr/usd/",
-               "australia"
-               "/india/aud/inr/",
-               "india/australia/inr/aud/"]
+    url_ext = ["germany/india/eur/inr/", "india/germany/inr/eur", "united-states/india/usd/inr/",
+               "india/united-states/inr/usd/", "australia/india/aud/inr/", "india/australia/inr/aud/",
+               "united-kingdom/india/gbp/inr", "india/united-kingdom/inr/gbp", "japan/india/jpy/inr",
+               "india/japan/inr/jpy", "germany/united-states/eur/usd", "united-states/germany/usd/eur",
+               "germany/united-kingdom/eur/gbp", "united-kingdom/germany/gbp/eur",
+               "united-kingdom/united-states/gbp/usd", "united-states/united-kingdom/usd/gbp",
+               "japan/united-kingdom/jpy/gbp", "united-kingdom/japan/gbp/jpy",
+               "united-states/japan/usd/jpy", "japan/united-states/jpy/usd"]
 
     for k in range(0, len(url_ext)):
 
@@ -75,7 +79,10 @@ def get_prices():
         # Note : list of service providers ( to be deleted manually first from here before deleting the values from
         # database on admin page list
 
-        service_providers = ["TransferWise", "Money2India"]  # DELETION HERE IF YOU DONT SUPPORT THEIR SERVICES ANYMORE
+        # DELETION HERE IF YOU DONT SUPPORT THESE SERVICES ANYMORE
+
+        service_providers = ["TransferWise", "Money2India", "Skrill", "WorldRemit", "Remitly", "TransferGo",
+                             "CurrencyFair", "Azimo", "PayPal", "Ria", "EasySend", "Xendpay"]
 
         """
         Making an object from BeautifulSoup and passing the string 'res' HTML document requested and parse it to lxml’s,HTML 
@@ -159,10 +166,10 @@ def get_prices():
 # If set to True, the scheduler will automatically terminate with the application otherwise manually shutdown it
 scheduler = BackgroundScheduler(daemonic=True)
 
-
 # continuous updating the database with job scheduler
-# scheduler.add_job(get_prices, trigger='interval', seconds=60)
-# scheduler.start()
+scheduler.add_job(get_prices, trigger='interval', seconds=1800)
+scheduler.start()
+
 
 # If page not found
 @app.errorhandler(404)
