@@ -166,7 +166,7 @@ def get_prices():
 scheduler = BackgroundScheduler(daemonic=True, timezone="Europe/Berlin")
 
 # continuous updating the database with job scheduler
-scheduler.add_job(get_prices, trigger='interval', seconds=121)
+scheduler.add_job(get_prices, trigger='interval', seconds=120)
 scheduler.start()
 
 
