@@ -163,7 +163,7 @@ def get_prices():
 
 
 # If set to True, the scheduler will automatically terminate with the application otherwise manually shutdown it
-scheduler = BackgroundScheduler(daemonic=True)
+scheduler = BackgroundScheduler(daemonic=True, timezone="Europe/Berlin")
 
 # continuous updating the database with job scheduler
 scheduler.add_job(get_prices, trigger='interval', seconds=1800)
